@@ -1,6 +1,6 @@
 package com.orlinskas.ForpostTestApp.userData;
 
-class Id {
+public class Id {
     private String name;
     private String value;
 

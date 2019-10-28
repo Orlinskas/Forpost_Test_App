@@ -9,8 +9,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-class JsonParserToUser {
-    ArrayList<User> parse(String json) {
+public class JsonParserToUser {
+    public ArrayList<User> parse(String json) {
         ArrayList<User> users = new ArrayList<>();
 
         try {

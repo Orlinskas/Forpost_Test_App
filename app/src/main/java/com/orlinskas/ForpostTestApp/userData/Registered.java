@@ -1,6 +1,6 @@
 package com.orlinskas.ForpostTestApp.userData;
 
-class Registered {
+public class Registered {
     private String date;
     private Integer age;
 

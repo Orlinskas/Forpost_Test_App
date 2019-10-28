@@ -1,6 +1,6 @@
 package com.orlinskas.ForpostTestApp.userData;
 
-class Location {
+public class Location {
     private Street street;
     private String city;
     private String state;

@@ -1,6 +1,6 @@
 package com.orlinskas.ForpostTestApp.userData;
 
-class Dob {
+public class Dob {
     private String date;
     private String age;
 

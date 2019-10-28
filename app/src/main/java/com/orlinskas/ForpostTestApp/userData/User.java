@@ -28,4 +28,52 @@ public class User {
         this.picture = picture;
         this.nat = nat;
     }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public Name getName() {
+        return name;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public Login getLogin() {
+        return login;
+    }
+
+    public Dob getDob() {
+        return dob;
+    }
+
+    public Registered getRegistered() {
+        return registered;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public String getCell() {
+        return cell;
+    }
+
+    public Id getId() {
+        return id;
+    }
+
+    public Picture getPicture() {
+        return picture;
+    }
+
+    public String getNat() {
+        return nat;
+    }
 }

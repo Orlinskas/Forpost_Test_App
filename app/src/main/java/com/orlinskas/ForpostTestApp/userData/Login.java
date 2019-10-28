@@ -1,6 +1,6 @@
 package com.orlinskas.ForpostTestApp.userData;
 
-class Login {
+public class Login {
     private String uuid;
     private String username;
     private String password;
