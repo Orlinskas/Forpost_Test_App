@@ -17,7 +17,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.orlinskas.ForpostTestApp.R;
-import com.orlinskas.ForpostTestApp.UserRowFragmentActions;
 import com.orlinskas.ForpostTestApp.userData.Name;
 import com.orlinskas.ForpostTestApp.userData.User;
 

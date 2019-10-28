@@ -1,4 +1,4 @@
-package com.orlinskas.ForpostTestApp;
+package com.orlinskas.ForpostTestApp.ui;
 
 import com.orlinskas.ForpostTestApp.userData.User;
 
