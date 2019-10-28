@@ -4,10 +4,10 @@ import android.net.Uri;
 
 import java.net.URL;
 
-public class RequestURLGenerator {
+class RequestURLGenerator {
     private final String RESULTS = "results";
 
-    public URL generate(Request request) {
+    URL generate(Request request) {
         Uri builder = Uri.parse(request.getSource())
                 .buildUpon()
                 .appendQueryParameter(RESULTS, request.getResultCount())
