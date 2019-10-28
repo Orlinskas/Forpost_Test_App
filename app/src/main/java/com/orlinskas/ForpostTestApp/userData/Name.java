@@ -1,5 +1,8 @@
 package com.orlinskas.ForpostTestApp.userData;
 
+import org.parceler.Parcel;
+
+@Parcel
 public class Name {
     private String title;
     private String first;

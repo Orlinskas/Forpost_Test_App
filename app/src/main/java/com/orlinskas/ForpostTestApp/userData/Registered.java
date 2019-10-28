@@ -1,5 +1,8 @@
 package com.orlinskas.ForpostTestApp.userData;
 
+import org.parceler.Parcel;
+
+@Parcel
 public class Registered {
     private String date;
     private Integer age;
@@ -8,5 +11,13 @@ public class Registered {
         super();
         this.date = date;
         this.age = age;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public Integer getAge() {
+        return age;
     }
 }

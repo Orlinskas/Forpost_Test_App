@@ -1,5 +1,8 @@
 package com.orlinskas.ForpostTestApp.userData;
 
+import org.parceler.Parcel;
+
+@Parcel
 public class Picture {
     private String large;
     private String medium;
