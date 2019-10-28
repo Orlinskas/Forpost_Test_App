@@ -1,7 +1,6 @@
-package com.orlinskas.ForpostTestApp;
+package com.orlinskas.ForpostTestApp.userData;
 
 class Location {
-
     public Location(String street, String city, String state, String postcode, Coordinates coordinates) {
         this.street = street;
         this.city = city;

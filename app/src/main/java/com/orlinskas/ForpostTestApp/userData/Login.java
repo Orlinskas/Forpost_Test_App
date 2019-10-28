@@ -1,7 +1,6 @@
-package com.orlinskas.ForpostTestApp;
+package com.orlinskas.ForpostTestApp.userData;
 
 class Login {
-
     public Login(String uuid, String username, String password, String salt, String md5, String sha1, String sha256) {
         this.uuid = uuid;
         this.username = username;

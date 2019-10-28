@@ -1,7 +1,6 @@
-package com.orlinskas.ForpostTestApp;
+package com.orlinskas.ForpostTestApp.userData;
 
 class Registered {
-
     public Registered(String date, Integer age) {
         super();
         this.date = date;

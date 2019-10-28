@@ -1,7 +1,6 @@
-package com.orlinskas.ForpostTestApp;
+package com.orlinskas.ForpostTestApp.userData;
 
 class Timezone {
-
     public Timezone(String offset, String description) {
         this.offset = offset;
         this.description = description;

@@ -1,7 +1,6 @@
-package com.orlinskas.ForpostTestApp;
+package com.orlinskas.ForpostTestApp.userData;
 
 class Picture {
-
     public Picture(String large, String medium, String thumbnail) {
         super();
         this.large = large;

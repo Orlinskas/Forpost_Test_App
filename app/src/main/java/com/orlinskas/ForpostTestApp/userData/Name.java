@@ -1,7 +1,6 @@
-package com.orlinskas.ForpostTestApp;
+package com.orlinskas.ForpostTestApp.userData;
 
 class Name {
-
     public Name(String title, String first, String last) {
         this.title = title;
         this.first = first;

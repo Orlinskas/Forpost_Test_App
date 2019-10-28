@@ -1,7 +1,7 @@
-package com.orlinskas.ForpostTestApp;
+package com.orlinskas.ForpostTestApp.userData;
+
 
 class User {
-
     public User(String gender, Name name, Location location, String email, Login login, Dob dob, Registered registered, String phone, String cell, Id id, Picture picture, String nat) {
         this.gender = gender;
         this.name = name;

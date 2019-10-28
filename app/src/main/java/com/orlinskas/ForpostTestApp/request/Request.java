@@ -2,7 +2,7 @@ package com.orlinskas.ForpostTestApp.request;
 
 
 import com.orlinskas.ForpostTestApp.DateHelper;
-import com.orlinskas.ForpostTestApp.Settings;
+import com.orlinskas.ForpostTestApp.userData.Settings;
 
 import java.io.Serializable;
 

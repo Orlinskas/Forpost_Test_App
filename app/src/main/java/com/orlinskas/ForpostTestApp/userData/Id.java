@@ -1,7 +1,6 @@
-package com.orlinskas.ForpostTestApp;
+package com.orlinskas.ForpostTestApp.userData;
 
 class Id {
-
     public Id(String name, String value) {
         super();
         this.name = name;
