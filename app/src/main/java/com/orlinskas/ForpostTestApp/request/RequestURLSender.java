@@ -7,9 +7,8 @@ import java.net.URL;
 import java.util.Scanner;
 
 public class RequestURLSender {
-
     public String send(URL url) throws IOException {
-    HttpURLConnection httpURLConnection = null;
+        HttpURLConnection httpURLConnection = null;
 
     try {
         httpURLConnection = (HttpURLConnection) url.openConnection();

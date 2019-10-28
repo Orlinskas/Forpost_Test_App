@@ -1,12 +1,9 @@
 package com.orlinskas.ForpostTestApp.request;
 
-
 import com.orlinskas.ForpostTestApp.DateHelper;
-import com.orlinskas.ForpostTestApp.userData.Settings;
+import com.orlinskas.ForpostTestApp.Settings;
 
-import java.io.Serializable;
-
-class Request implements Serializable {
+class Request {
     private String date;
     private String source;
     private String resultCount;

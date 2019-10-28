@@ -1,4 +1,4 @@
-package com.orlinskas.ForpostTestApp.userData;
+package com.orlinskas.ForpostTestApp;
 
 public class Settings {
     public final static  int RESULT_COUNT = 20;

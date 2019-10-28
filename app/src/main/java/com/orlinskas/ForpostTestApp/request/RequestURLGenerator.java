@@ -13,12 +13,12 @@ class RequestURLGenerator {
                 .appendQueryParameter(RESULTS, request.getResultCount())
                 .build();
 
-        URL requestOpenWeather = null;
+        URL requestURL = null;
         try {
-            requestOpenWeather = new URL(builder.toString());
+            requestURL = new URL(builder.toString());
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return requestOpenWeather;
+        return requestURL;
     }
 }

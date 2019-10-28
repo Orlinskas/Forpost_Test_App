@@ -1,7 +1,19 @@
 package com.orlinskas.ForpostTestApp.userData;
 
+public class User {
+    private String gender;
+    private Name name;
+    private Location location;
+    private String email;
+    private Login login;
+    private Dob dob;
+    private Registered registered;
+    private String phone;
+    private String cell;
+    private Id id;
+    private Picture picture;
+    private String nat;
 
-class User {
     public User(String gender, Name name, Location location, String email, Login login, Dob dob, Registered registered, String phone, String cell, Id id, Picture picture, String nat) {
         this.gender = gender;
         this.name = name;
@@ -16,17 +28,4 @@ class User {
         this.picture = picture;
         this.nat = nat;
     }
-
-    private String gender;
-    private Name name;
-    private Location location;
-    private String email;
-    private Login login;
-    private Dob dob;
-    private Registered registered;
-    private String phone;
-    private String cell;
-    private Id id;
-    private Picture picture;
-    private String nat;
 }
