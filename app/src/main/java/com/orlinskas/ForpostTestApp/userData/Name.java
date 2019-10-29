@@ -2,6 +2,8 @@ package com.orlinskas.ForpostTestApp.userData;
 
 import org.parceler.Parcel;
 
+import java.util.Objects;
+
 @Parcel
 public class Name {
     private String title;
@@ -15,6 +17,21 @@ public class Name {
         this.title = title;
         this.first = first;
         this.last = last;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Name)) return false;
+        Name name = (Name) o;
+        return Objects.equals(getTitle(), name.getTitle()) &&
+                Objects.equals(getFirst(), name.getFirst()) &&
+                Objects.equals(getLast(), name.getLast());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getTitle(), getFirst(), getLast());
     }
 
     public String getTitle() {

@@ -2,6 +2,8 @@ package com.orlinskas.ForpostTestApp.userData;
 
 import org.parceler.Parcel;
 
+import java.util.Objects;
+
 @Parcel
 public class Location {
     private Street street;
@@ -19,6 +21,23 @@ public class Location {
         this.state = state;
         this.postcode = postcode;
         this.coordinates = coordinates;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Location)) return false;
+        Location location = (Location) o;
+        return Objects.equals(getStreet(), location.getStreet()) &&
+                Objects.equals(getCity(), location.getCity()) &&
+                Objects.equals(getState(), location.getState()) &&
+                Objects.equals(getPostcode(), location.getPostcode()) &&
+                Objects.equals(getCoordinates(), location.getCoordinates());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getStreet(), getCity(), getState(), getPostcode(), getCoordinates());
     }
 
     public Street getStreet() {

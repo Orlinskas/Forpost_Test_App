@@ -9,12 +9,14 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.util.ArrayList;
+import static org.mockito.Mockito.*;
 
 import static org.junit.Assert.*;
 
 @RunWith(AndroidJUnit4.class)
 public class JsonParserToUserTest {
     private String json;
+    private User mockedUser;
 
     @Before
     public void setUp() {
@@ -84,6 +86,11 @@ public class JsonParserToUserTest {
                 "    \"version\": \"1.3\"\n" +
                 "  }\n" +
                 "}";
+        mockedUser = mock(User.class);
+        when(mockedUser.getCell()).thenReturn("(398)-910-0927");
+        when(mockedUser.getEmail()).thenReturn("gwendolyn.perkins@example.com");
+        when(mockedUser.getGender()).thenReturn("female");
+        when(mockedUser.getPhone()).thenReturn("(364)-909-9585");
     }
 
     @Test
@@ -92,5 +99,9 @@ public class JsonParserToUserTest {
         JsonParserToUser parser = new JsonParserToUser();
         users = parser.parse(json);
         assertEquals(1, users.size());
+        assertEquals(mockedUser.getCell(), users.get(0).getCell());
+        assertEquals(mockedUser.getEmail(), users.get(0).getEmail());
+        assertEquals(mockedUser.getGender(), users.get(0).getGender());
+        assertEquals(mockedUser.getPhone(), users.get(0).getPhone());
     }
 }

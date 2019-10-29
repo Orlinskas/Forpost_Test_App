@@ -2,6 +2,8 @@ package com.orlinskas.ForpostTestApp.userData;
 
 import org.parceler.Parcel;
 
+import java.util.Objects;
+
 @Parcel
 public class Login {
     private String uuid;
@@ -23,6 +25,25 @@ public class Login {
         this.md5 = md5;
         this.sha1 = sha1;
         this.sha256 = sha256;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Login)) return false;
+        Login login = (Login) o;
+        return Objects.equals(getUuid(), login.getUuid()) &&
+                Objects.equals(getUsername(), login.getUsername()) &&
+                Objects.equals(getPassword(), login.getPassword()) &&
+                Objects.equals(getSalt(), login.getSalt()) &&
+                Objects.equals(getMd5(), login.getMd5()) &&
+                Objects.equals(getSha1(), login.getSha1()) &&
+                Objects.equals(getSha256(), login.getSha256());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getUuid(), getUsername(), getPassword(), getSalt(), getMd5(), getSha1(), getSha256());
     }
 
     public String getUuid() {

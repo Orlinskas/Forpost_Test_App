@@ -2,6 +2,8 @@ package com.orlinskas.ForpostTestApp.userData;
 
 import org.parceler.Parcel;
 
+import java.util.Objects;
+
 @Parcel
 public class User {
     private String gender;
@@ -33,6 +35,30 @@ public class User {
         this.id = id;
         this.picture = picture;
         this.nat = nat;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User)) return false;
+        User user = (User) o;
+        return Objects.equals(getGender(), user.getGender()) &&
+                Objects.equals(getName(), user.getName()) &&
+                Objects.equals(getLocation(), user.getLocation()) &&
+                Objects.equals(getEmail(), user.getEmail()) &&
+                Objects.equals(getLogin(), user.getLogin()) &&
+                Objects.equals(getDob(), user.getDob()) &&
+                Objects.equals(getRegistered(), user.getRegistered()) &&
+                Objects.equals(getPhone(), user.getPhone()) &&
+                Objects.equals(getCell(), user.getCell()) &&
+                Objects.equals(getId(), user.getId()) &&
+                Objects.equals(getPicture(), user.getPicture()) &&
+                Objects.equals(getNat(), user.getNat());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getGender(), getName(), getLocation(), getEmail(), getLogin(), getDob(), getRegistered(), getPhone(), getCell(), getId(), getPicture(), getNat());
     }
 
     public String getGender() {
@@ -82,4 +108,6 @@ public class User {
     public String getNat() {
         return nat;
     }
+
+
 }
