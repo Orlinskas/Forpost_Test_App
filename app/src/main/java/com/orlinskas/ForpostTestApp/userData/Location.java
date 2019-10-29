@@ -10,6 +10,9 @@ public class Location {
     private String postcode;
     private Coordinates coordinates;
 
+    Location() {
+    }
+
     public Location(Street street, String city, String state, String postcode, Coordinates coordinates) {
         this.street = street;
         this.city = city;

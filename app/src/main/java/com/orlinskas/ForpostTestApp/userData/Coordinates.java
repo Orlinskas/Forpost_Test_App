@@ -7,6 +7,9 @@ class Coordinates {
     private String latitude;
     private String longitude;
 
+    Coordinates() {
+    }
+
     public Coordinates(String latitude, String longitude) {
         this.latitude = latitude;
         this.longitude = longitude;

@@ -20,7 +20,7 @@ import org.parceler.Parcels;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements UserRowFragmentActions {
+public class MainActivity extends AppCompatActivity implements UserFragmentActions {
     private ArrayList<User> users;
     private ProgressBar progressBar;
 
@@ -29,7 +29,13 @@ public class MainActivity extends AppCompatActivity implements UserRowFragmentAc
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         progressBar = findViewById(R.id.activity_main_pb);
-        new LoadUsersTask().execute();
+        if(savedInstanceState != null){
+                users = Parcels.unwrap(savedInstanceState.getParcelable("users"));
+                showUsers();
+        }
+        else {
+            new LoadUsersTask().execute();
+        }
     }
 
     @SuppressLint("StaticFieldLeak")
@@ -68,9 +74,9 @@ public class MainActivity extends AppCompatActivity implements UserRowFragmentAc
         for (User user : users){
             Fragment fragment = fm.findFragmentById(R.id.activity_main_ll_user_container);
             if (fragment == null) {
-                fragment = new UserRowFragment();
-                ((UserRowFragment) fragment).user = user;
-                ((UserRowFragment) fragment).countFragment = users.indexOf(user);
+                fragment = new UserFragment();
+                ((UserFragment) fragment).user = user;
+                ((UserFragment) fragment).countFragment = users.indexOf(user);
                 fm.beginTransaction()
                         .add(R.id.activity_main_ll_user_container, fragment)
                         .commit();
@@ -85,5 +91,11 @@ public class MainActivity extends AppCompatActivity implements UserRowFragmentAc
         Intent intent = new Intent(getApplicationContext(), UserActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putParcelable("users", Parcels.wrap(users));
     }
 }

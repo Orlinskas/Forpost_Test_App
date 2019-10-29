@@ -7,6 +7,9 @@ public class Id {
     private String name;
     private String value;
 
+    Id() {
+    }
+
     public Id(String name, String value) {
         super();
         this.name = name;

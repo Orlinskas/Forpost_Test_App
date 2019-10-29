@@ -8,6 +8,9 @@ public class Picture {
     private String medium;
     private String thumbnail;
 
+    Picture() {
+    }
+
     public Picture(String large, String medium, String thumbnail) {
         this.large = large;
         this.medium = medium;

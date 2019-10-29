@@ -8,6 +8,9 @@ public class Name {
     private String first;
     private String last;
 
+    Name() {
+    }
+
     public Name(String title, String first, String last) {
         this.title = title;
         this.first = first;

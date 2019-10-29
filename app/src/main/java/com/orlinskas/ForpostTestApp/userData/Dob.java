@@ -7,6 +7,9 @@ public class Dob {
     private String date;
     private String age;
 
+    Dob() {
+    }
+
     public Dob(String date, String age) {
         this.date = date;
         this.age = age;

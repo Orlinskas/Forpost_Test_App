@@ -17,6 +17,9 @@ public class User {
     private Picture picture;
     private String nat;
 
+    public User() {
+    }
+
     public User(String gender, Name name, Location location, String email, Login login, Dob dob, Registered registered, String phone, String cell, Id id, Picture picture, String nat) {
         this.gender = gender;
         this.name = name;

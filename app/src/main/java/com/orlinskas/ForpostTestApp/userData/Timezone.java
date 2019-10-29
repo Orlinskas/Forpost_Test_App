@@ -7,6 +7,9 @@ class Timezone {
     private String offset;
     private String description;
 
+    Timezone() {
+    }
+
     public Timezone(String offset, String description) {
         this.offset = offset;
         this.description = description;
